@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <title>Resume-DOM</title>
+  </head>
+  <body >
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>   
+          
+  <script>
+var tope=document.createElement('div');
+tope.setAttribute('class','grid-container')
+tope.setAttribute('id','top');
+document.body.appendChild(tope);
+var top1=document.createElement('div');
+top1.setAttribute('class','item1');
+top1.setAttribute('style','z-index: 800;');
+document.body.appendChild(top1)
+var steve = document.createElement("IMG");
+steve.setAttribute('id','steve');
+steve.setAttribute("src", "https://cdn0.vox-cdn.com/thumbor/aLlMuv70UTKjMVB3lxES9394quI=/0x123:706x520/1600x900/cdn0.vox-cdn.com/assets/738480/stevejobs.png");
+steve.setAttribute("width", "150px");
+steve.setAttribute("height", "150px");
+steve.setAttribute("alt", "Steve Jobs");
+steve.setAttribute('style','position:relative;z-index: 1;')  
+top1.appendChild(steve)
+var break1=document.createElement('BR');
+top1.appendChild(break1)
+var dud = document.createElement("IMG");
+dud.setAttribute('id','briandudely');
+dud.setAttribute("src", "Picture1.png");
+dud.setAttribute("alt", "Brian Dudely");
+top1.appendChild(dud);
+tope.append(top1)
+var item2=document.createElement('div');
+item2.setAttribute('class','item2');
+item2.setAttribute('style','position:relative; z-index: 1;');
+
+var address = document.createElement("P");
+address.setAttribute('id','address');
+var text = document.createTextNode("N.Damen Avenenue, Chicago 9999 | 9999-9999-9999 | hello@kickresume.com |www.kickresume.com");
+address.appendChild(text);
+item2.append(address);
+tope.append(top1,item2);
+document.body.append(tope);
+
+var hb1=document.createElement('HR');
+document.body.append(hb1);
+
+
+var divide=document.createElement("div");
+divide.setAttribute("class","partition"); //main
+var section1=document.createElement("section")
+var profile=document.createElement("div");
+profile.setAttribute("class","icon");
+var icn=document.createElement("i");
+icn.setAttribute("class","fas fa-user-alt");
+var h2=document.createElement("h2");
+var txt=document.createTextNode("Profile")
+h2.appendChild(txt)
+profile.append(icn,h2);
+
+var p=document.createElement("p");
+var txt=document.createTextNode("An astute polymath with an experience of a year and a half in the field of IT with strong problem solving and troubleshooting skills preluded with analytical thinking. Known for being an amicable and a transformational personality with an ability to work individually and as a team, thus contributing towards the mutual growth and benefit.")
+p.appendChild(txt)
+section1.append(profile,p)
+//document.body.append(section1)
+
+var break3=document.createElement('BR');
+document.body.append(break3);
+var section2=document.createElement("section")
+var skills=document.createElement("div");
+skills.setAttribute("class","icon");
+var icn=document.createElement("i");
+icn.setAttribute("class","fas fa-flask");
+var h2=document.createElement("h2");
+var txt=document.createTextNode("Skills")
+h2.appendChild(txt)
+skills.append(icn,h2);
+document.body.append(break1);
+
+var p1=document.createElement("p");
+p1.setAttribute("class","capt")
+var txt=document.createTextNode("Technical Skills")
+p1.appendChild(txt);
+
+var techskills=document.createElement("table");
+techskills.setAttribute("class","center")
+techskills.setAttribute("id","techskills")
+
+
+
+var row1=document.createElement('tr');
+row1.classList.add('row1')
+
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.setAttribute("style","width:55%")
+col1.innerText="JavaScript"
+
+var col2=document.createElement('td');
+col2.classList.add('col2');
+var js = document.createElement("INPUT");
+  js.setAttribute("type", "range");
+  js.setAttribute("id", "js")
+  js.setAttribute("class", "range")
+  js.setAttribute("min", "0")
+  js.setAttribute("max", "10")
+  js.setAttribute("value", "9")
+  col2.appendChild(js);
+
+row1.append(col1,col2);
+
+var row2=document.createElement('tr');
+row2.classList.add('row2')
+
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.innerText="CSS"
+
+var col2=document.createElement('td');
+col2.classList.add('col2');
+var css = document.createElement("INPUT");
+  css.setAttribute("type", "range");
+  css.setAttribute("id", "css")
+  css.setAttribute("min", "0")
+  css.setAttribute("max", "10")
+  css.setAttribute("value", "8")
+  col2.appendChild(css);
+
+row2.append(col1,col2);
+
+var row3=document.createElement('tr');
+row3.classList.add('row3')
+
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.innerText="HTML"
+
+var col2=document.createElement('td');
+col2.classList.add('col2');
+var htmll = document.createElement("INPUT");
+  htmll.setAttribute("type", "range");
+  htmll.setAttribute("id", "css")
+  htmll.setAttribute("min", "0")
+  htmll.setAttribute("max", "10")
+  htmll.setAttribute("value", "7")
+  col2.appendChild(htmll);
+
+row3.append(col1,col2);
+
+var row4=document.createElement('tr');
+row4.classList.add('row4')
+
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.innerText="React"
+
+var col2=document.createElement('td');
+col2.classList.add('col2');
+var rct = document.createElement("INPUT");
+  rct.setAttribute("type", "range");
+  rct.setAttribute("id", "css")
+  rct.setAttribute("min", "0")
+  rct.setAttribute("max", "10")
+  rct.setAttribute("value", "9")
+  col2.appendChild(rct);
+
+row4.append(col1,col2);
+
+var row5=document.createElement('tr');
+row5.classList.add('row5')
+
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.innerText="Redux"
+
+var col2=document.createElement('td');
+col2.classList.add('col2');
+var rdx = document.createElement("INPUT");
+  rdx.setAttribute("type", "range");
+  rdx.setAttribute("id", "css")
+  rdx.setAttribute("min", "0")
+  rdx.setAttribute("max", "10")
+  rdx.setAttribute("value", "8")
+  col2.appendChild(rdx);
+
+row5.append(col1,col2);
+
+var row6=document.createElement('tr');
+row6.classList.add('row6')
+
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.innerText="Mongo"
+
+var col2=document.createElement('td');
+col2.classList.add('col2');
+var mng = document.createElement("INPUT");
+  mng.setAttribute("type", "range");
+  mng.setAttribute("id", "css")
+  mng.setAttribute("min", "0")
+  mng.setAttribute("max", "10")
+  mng.setAttribute("value", "10")
+  col2.appendChild(mng);
+
+row6.append(col1,col2);
+
+var row7=document.createElement('tr');
+row7.classList.add('row7')
+
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.innerText="Deployment"
+
+var col2=document.createElement('td');
+col2.classList.add('col2');
+var dpmnt = document.createElement("INPUT");
+  dpmnt.setAttribute("type", "range");
+  dpmnt.setAttribute("id", "css")
+  dpmnt.setAttribute("min", "0")
+  dpmnt.setAttribute("max", "10")
+  dpmnt.setAttribute("value", "8")
+  col2.appendChild(dpmnt);
+
+row7.append(col1,col2);
+techskills.append(row1,row2,row3,row4,row5,row6,row7)
+
+document.body.append(break3);
+////////////////////////////////////////////////
+var addskills=document.createElement("table");
+addskills.setAttribute("class","center")
+addskills.setAttribute("id","addskills")
+var p2=document.createElement("p");
+p2.setAttribute("class","capt")
+var txt=document.createTextNode("Additional Skills")
+p2.appendChild(txt);
+
+var row1=document.createElement('tr');
+row1.classList.add('row1')
+
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.innerText="Project management"
+
+var col2=document.createElement('td');
+col2.classList.add('col2');
+var pm = document.createElement("INPUT");
+  pm.setAttribute("type", "range");
+  pm.setAttribute("id", "pm")
+  pm.setAttribute("class", "range")
+  pm.setAttribute("min", "0")
+  pm.setAttribute("max", "10")
+  pm.setAttribute("value", "9")
+  col2.appendChild(pm);
+
+row1.append(col1,col2);
+
+var row2=document.createElement('tr');
+row2.classList.add('row2')
+
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.innerText="Recruitment"
+
+var col2=document.createElement('td');
+col2.classList.add('col2');
+var css = document.createElement("INPUT");
+  css.setAttribute("type", "range");
+  css.setAttribute("id", "css")
+  css.setAttribute("min", "0")
+  css.setAttribute("max", "10")
+  css.setAttribute("value", "8")
+  col2.appendChild(css);
+
+row2.append(col1,col2);
+
+var row3=document.createElement('tr');
+row3.classList.add('row3')
+
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.innerText="Business Development"
+
+var col2=document.createElement('td');
+col2.classList.add('col2');
+var htmll = document.createElement("INPUT");
+  htmll.setAttribute("type", "range");
+  htmll.setAttribute("id", "css")
+  htmll.setAttribute("min", "0")
+  htmll.setAttribute("max", "10")
+  htmll.setAttribute("value", "7")
+  col2.appendChild(htmll);
+
+row3.append(col1,col2);
+
+var row4=document.createElement('tr');
+row4.classList.add('row4')
+
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.innerText="Editing"
+
+var col2=document.createElement('td');
+col2.classList.add('col2');
+var rct = document.createElement("INPUT");
+  rct.setAttribute("type", "range");
+  rct.setAttribute("id", "css")
+  rct.setAttribute("min", "0")
+  rct.setAttribute("max", "10")
+  rct.setAttribute("value", "5")
+  col2.appendChild(rct);
+
+row4.append(col1,col2);
+
+var row5=document.createElement('tr');
+row5.classList.add('row5')
+
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.innerText="Fundraising"
+
+var col2=document.createElement('td');
+col2.classList.add('col2');
+var rdx = document.createElement("INPUT");
+  rdx.setAttribute("type", "range");
+  rdx.setAttribute("id", "css")
+  rdx.setAttribute("min", "0")
+  rdx.setAttribute("max", "10")
+  rdx.setAttribute("value", "8")
+  col2.appendChild(rdx);
+
+row5.append(col1,col2);
+addskills.append(row1,row2,row3,row4,row5)
+section2.append(skills,p1,techskills,p2,addskills)
+//document.body.append(section2)  
+document.body.append(break3);
+
+var section3=document.createElement("section")
+var work1=document.createElement("div");
+work1.setAttribute("class","icon");
+var icn=document.createElement("i");
+icn.setAttribute("class","fas fa-briefcase");
+var h2=document.createElement("h2");
+var txt=document.createTextNode("Work Experience")
+h2.appendChild(txt)
+work1.append(icn,h2);
+document.body.append(break1);
+
+var sysp=document.createElement("table");
+sysp.setAttribute("id","sysp")
+
+var row=document.createElement('tr');
+row.classList.add('row')
+
+var col=document.createElement('td');
+col.classList.add('col')
+var row1=document.createElement('tr');
+row1.classList.add('row1')
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.setAttribute('style','width:600px')
+col1.innerText="SYSTEMS SPECIALIST"
+
+var row2=document.createElement('tr');
+row2.classList.add('row2')
+var col2=document.createElement('td');
+col2.classList.add('col2')
+col1.setAttribute('class','bold')
+col2.innerText="IBM-GTS India Private Ltd"
+var col3=document.createElement('td');
+col3.classList.add('col3')
+col3.innerText="Oct’16 – Apr’18"
+
+row2.append(col2,col3)
+row1.append(col1)
+col.append(row1,row2)
+row.append(col)
+sysp.append(row)
+
+var row0=document.createElement('tr');
+row0.classList.add('row0');
+var col0=document.createElement('td');
+col0.classList.add('col0')
+col0.setAttribute('style','width:600px')
+var ul= document.createElement("ul")
+
+
+var li1 = document.createElement("LI");
+  var txt = document.createTextNode("Provided 24/7 support for both Production and Non-Production servers in the Remote infrastructure Monitoring Environment thereby maintained a good server health");
+  li1.appendChild(txt);
+  var li2 = document.createElement("LI");
+  var txt = document.createTextNode("Effectively participated in the migration of the account from Capgemini to IBM, which led to no job failure state that made client satisfied");
+  li2.appendChild(txt);
+  var li3 = document.createElement("LI");
+  var txt = document.createTextNode("Performed both Admin and Scheduling team job roles with the team contribution and increased the productivity");
+  li3.appendChild(txt);
+  var li4 = document.createElement("LI");
+  var txt = document.createTextNode("Involved in sharing of information between team members, team huddles thereby improving the team building notion");
+  li4.appendChild(txt);
+  var li5 = document.createElement("LI");
+  var txt = document.createTextNode("Fostered the mentoring initiatives to increase knowledge and subsequent productivity");
+  li5.appendChild(txt);
+  ul.append(li1,li2,li3,li4,li5);
+col0.append(ul)
+row0.append(col0)
+sysp.append(row0)
+section3.append(work1,sysp) 
+document.body.append(break3);
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var section4=document.createElement("section")
+var work2=document.createElement("div");
+work2.setAttribute("class","icon");
+var icn=document.createElement("i");
+icn.setAttribute("class","fas fa-briefcase");
+var h2=document.createElement("h2");
+var txt=document.createTextNode("Work Experience")
+h2.appendChild(txt)
+work2.append(icn,h2);
+document.body.append(break3);
+
+var teach=document.createElement("table");
+teach.setAttribute("id","teach")
+
+var row=document.createElement('tr');
+row.classList.add('row')
+
+var col=document.createElement('td');
+col.classList.add('col')
+var row1=document.createElement('tr');
+row1.classList.add('row1')
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.setAttribute('style','width:600px')
+col1.setAttribute('class','bold')
+col1.innerText="TEACHING ASSISTANT | Switching Circuits"
+
+var row2=document.createElement('tr');
+row2.classList.add('row2')
+var col2=document.createElement('td');
+col2.classList.add('col2')
+col2.innerText="Carleton University, Ottawa, ON, Canada"
+var col3=document.createElement('td');
+col3.classList.add('col3')
+col3.innerText="Jan’19 – Apr’19"
+
+
+
+var row0=document.createElement('tr');
+row0.classList.add('row0');
+var col0=document.createElement('td');
+col0.classList.add('col0')
+col0.setAttribute('style','width:600px')
+var ul= document.createElement("ul")
+
+var li1 = document.createElement("LI");
+var txt = document.createTextNode("Demonstrated exciting exercises in the lab for the students and assisted them individually,thereby engaged everyone in the class and motivated them regarding the subject");
+li1.appendChild(txt);
+var li2 = document.createElement("LI");
+var txt = document.createTextNode("Tutored several students on topics that weren’t apparent to them and improved their expertise in that subject");
+li2.appendChild(txt);
+var li3 = document.createElement("LI");
+var txt = document.createTextNode("Met the non-performing students individually and worked along with them to support for their better performance in the subject");
+li3.appendChild(txt);
+ul.append(li1,li2,li3);
+row2.append(col2,col3)
+row1.append(col1)
+col.append(row1,row2)
+row.append(col)
+teach.append(row)
+col0.append(ul)
+row0.append(col0)
+teach.append(row0)
+
+section4.append(work2,teach)
+//document.body.append(section3,section4)
+
+var section5=document.createElement("section")
+var edu=document.createElement("div");
+edu.setAttribute("class","icon");
+var icn=document.createElement("i");
+icn.setAttribute("class","fas fa-graduation-cap");
+var h2=document.createElement("h2");
+var txt=document.createTextNode("Education")
+h2.appendChild(txt)
+edu.append(icn,h2);
+document.body.append(break1);
+
+var mast=document.createElement("table");
+mast.setAttribute("id","mast")
+
+var row=document.createElement('tr');
+row.classList.add('row')
+
+var col=document.createElement('td');
+col.classList.add('col')
+var row1=document.createElement('tr');
+row1.classList.add('row1')
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.setAttribute('style','width:600px')
+col1.setAttribute('class','bold')
+col1.innerText="MASTER OF ENGINEERING | System and Computer Engineering"
+
+var row2=document.createElement('tr');
+row2.classList.add('row2')
+var col2=document.createElement('td');
+col2.classList.add('col2')
+col2.setAttribute('style','width:600px')
+col2.innerText="Carleton University, Ottawa, ON, Canada"
+var col3=document.createElement('td');
+col3.classList.add('col3')
+col3.innerText="Sep'18 – Dec’19"
+
+row2.append(col2,col3)
+row1.append(col1)
+col.append(row1,row2)
+row.append(col)
+mast.append(row)
+
+var row0=document.createElement('tr');
+row0.classList.add('row0');
+var col0=document.createElement('td');
+col0.classList.add('col0')
+col0.setAttribute('style','width:600px')
+var ul= document.createElement("ul")
+
+
+var li1 = document.createElement("LI");
+  var txt = document.createTextNode("Awarded with Teaching Assistantship for the excelling in academics");
+  li1.appendChild(txt);
+  ul.append(li1);
+col0.append(ul)
+row0.append(col0)
+mast.append(row0)
+section5.append(edu,mast) 
+document.body.append(break3);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var section6=document.createElement("section")
+var bach=document.createElement("table");
+bach.setAttribute("id","bach")
+
+var row=document.createElement('tr');
+row.classList.add('row')
+
+var col=document.createElement('td');
+col.classList.add('col')
+var row1=document.createElement('tr');
+row1.classList.add('row1')
+var col1=document.createElement('td');
+col1.classList.add('col1')
+col1.setAttribute('style','width:600px')
+col1.setAttribute('class','bold')
+col1.innerText="BACHELOR OF ENGINEERING | Electronics and Communication Engineering"
+
+var row2=document.createElement('tr');
+row2.classList.add('row2')
+var col2=document.createElement('td');
+col2.classList.add('col2')
+col2.setAttribute('style','width:600px')
+col2.innerText="Anna University, India"
+var col3=document.createElement('td');
+col3.classList.add('col3')
+
+col3.innerText="Aug’12 –Apr’16"
+
+row2.append(col2,col3)
+row1.append(col1)
+col.append(row1,row2)
+row.append(col)
+bach.append(row)
+
+var row0=document.createElement('tr');
+row0.classList.add('row0');
+var col0=document.createElement('td');
+col0.classList.add('col0')
+col0.setAttribute('style','width:600px')
+var ul= document.createElement("ul")
+
+
+var li1 = document.createElement("LI");
+var txt = document.createTextNode("Awarded as the Most Promising student of the batch 2012-2016");
+li1.appendChild(txt);
+var li3 = document.createElement("LI");
+var txt = document.createTextNode("Designed and produced cost-effective gadgets and marketed them, resulting in increased generation of revenue for the department");
+li3.appendChild(txt);
+var li4 = document.createElement("LI");
+var txt = document.createTextNode("Conducted workshops in other departments to train them the building of devices and earned income for the department");
+li4.appendChild(txt);
+ul.append(li1,li3,li4);
+col0.append(ul)
+row0.append(col0)
+bach.append(row0)
+section6.append(bach) 
+document.body.append(break3);
+//document.body.append(section6);
+divide.append(section1,section2,section4,section3,section5,section6)
+document.body.append(divide)
+
+
+
+
+
+
+
+
+</script>
